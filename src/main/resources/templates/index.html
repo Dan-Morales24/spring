@@ -1,0 +1,24 @@
+<form th:object="${producto}" th:action="@{/productos/agregar}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+  <div class="form-group">
+    <label for="nombre">Nombre del producto</label>
+    <input th:field="*{nombre}" id="nombre" placeholder="Escribe el nombre del producto" type="text"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="codigo">Código de barras</label>
+    <input th:field="*{codigo}" id="codigo" placeholder="Escribe el código del producto" type="text"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="existencia">Existencia actual</label>
+    <input th:field="*{existencia}" id="existencia" placeholder="Cantidad actual del producto" type="number"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="existencia">Precio</label>
+    <input th:field="*{precio}" id="precio" placeholder="Precio del producto" type="number"
+           class="form-control">
+  </div>
+  <button class="btn btn-success" type="submit">Guardar</button>
+  &nbsp;<a class="btn btn-warning" th:href="@{/productos/mostrar}">Ver todos</a>
+</form>
